@@ -1,4 +1,4 @@
-export default (state, action) => {
+const appReducer = (state, action) => {
   switch (action.type) {
     case "ADD_EVENT":
       return { ...state, events: [action.payload, ...state.events] };
@@ -11,3 +11,4 @@ export default (state, action) => {
       return state;
   }
 };
+export default appReducer;
